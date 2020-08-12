@@ -1,0 +1,18 @@
+:root {
+  --slack-color: #3f0f40;
+  --slack-color-light: #421f44;
+  --slack-color-lighter: #49274b;
+  --slack-color-hover: #340e36;
+  --google-blue: #4285f4;
+  --google-button-active-color: #1669F2;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app__body {
+  display: flex;
+  height: 100vh;
+}
+
