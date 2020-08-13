@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './ChatInput.css';
 import Button from "@material-ui/core/Button";
-import {db} from "./firebase";
-import {useStateValue} from "./StateProvider";
+import {db} from "../../firebase";
+import {useStateValue} from "../../context/StateProvider";
 import firebase from "firebase";
 
 function ChatInput({ channelName, channelId }) {

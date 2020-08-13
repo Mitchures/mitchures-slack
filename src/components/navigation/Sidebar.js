@@ -13,8 +13,8 @@ import LayersIcon from '@material-ui/icons/Layers';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import AddIcon from '@material-ui/icons/Add';
-import {db} from "./firebase";
-import {useStateValue} from "./StateProvider";
+import {db} from "../../firebase";
+import {useStateValue} from "../../context/StateProvider";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
@@ -56,7 +56,6 @@ function Sidebar() {
       <SidebarOption Icon={ArrowUpwardIcon} title="Show less"/>
       <hr/>
       <SidebarOption Icon={ArrowDownwardIcon} title="Channels"/>
-      <hr/>
       <SidebarOption
         Icon={AddIcon}
         title="Add channel"

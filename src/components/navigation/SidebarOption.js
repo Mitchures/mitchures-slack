@@ -1,7 +1,7 @@
 import React from 'react';
 import './SidebarOption.css';
 import { useHistory } from "react-router-dom";
-import {db} from "./firebase";
+import {db} from "../../firebase";
 
 function SidebarOption({ Icon, title, id, addChannelOption }) {
   const history = useHistory();
@@ -9,8 +9,6 @@ function SidebarOption({ Icon, title, id, addChannelOption }) {
   const selectChannel = () => {
     if (id) {
       history.push(`/room/${id}`);
-    } else {
-      history.push(title);
     }
   };
 

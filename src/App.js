@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Chat from "./Chat";
-import Login from "./Login";
-import {useStateValue} from "./StateProvider";
+import Header from "./components/Header";
+import Sidebar from "./components/navigation/Sidebar";
+import Chat from "./components/chat/Chat";
+import Login from "./components/Login";
+import {useStateValue} from "./context/StateProvider";
 
 function App() {
   const [{ user }] = useStateValue();
@@ -25,7 +25,7 @@ function App() {
                   <Chat/>
                 </Route>
                 <Route path="/">
-                  <h1>Welcome</h1>
+                  <Redirect to="/room/dHGaidvCoT5Joakos3gD" />
                 </Route>
               </Switch>
             </div>
